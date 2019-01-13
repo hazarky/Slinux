@@ -46,7 +46,7 @@ sudo rkhunter -c
 echo "Installing snap"
 sudo apt install -y snap
 echo "Installing s-tui"
-sudo apt install -y python-pip stress
+sudo yum install -y python-pip stress
 sudo pip install s-tui
 sudo yum autoclean
 else
