@@ -28,6 +28,7 @@ sudo yum install -y ufw
 sudo yum autoclean
 sudo ufw enable
 echo "Installing lynis"
+sudo yum install -y epel-release
 sudo yum install -y lynis
 sudo yum autoclean
 echo "Installing htop"
@@ -46,7 +47,7 @@ sudo rkhunter -c
 echo "Installing snap"
 sudo apt install -y snap
 echo "Installing s-tui"
-sudo apt install -y python-pip stress
+sudo yum install -y python-pip stress
 sudo pip install s-tui
 sudo yum autoclean
 else
