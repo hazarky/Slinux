@@ -7,22 +7,5 @@ sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4
 sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4" port port="80" protocol="tcp" drop'
 sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4" port port="21" protocol="tcp" drop'
 sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4" port port="23" protocol="udp" drop'
-
-echo 1. add a service.
-echo 2. remove a service.
-echo 3. block a specific address on public zone.
-echo 4. block a specific port on public zone.
-echo 5. block a specific address and port on the public zone.
-echo 6. Exit.
-read -p"Enter a number from above:" num
-if [$num == "1"] then
-  read -p "Enter a service:" ser
-  sudo firewall-cmd --permanent --zone="public" --add-service=$ser
-if [$num == "2"] then
-  sudo firewall-cmd --list-all
-  read -p "Enter a service:" ser
-  sudo firewall-cmd --permanent --zone="public" --remove-service=$ser
-if [$num == "3"] then
-  sudo firewall-cmd --list-all
-read -p "Enter a specific address on public zone:" add
-sudoi firewall-cmd --permanent --zone="public -removead"
+sudo systemctl restart firewalld.service
+echo Basic Configuration is set up
