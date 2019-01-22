@@ -8,4 +8,4 @@ sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4
 sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4" port port="21" protocol="tcp" drop'
 sudo firewall-cmd --permanent --zone="public" --add-rich-rule='rule family="ipv4" port port="23" protocol="udp" drop'
 sudo systemctl restart firewalld.service
-echo Basic Configuration is set up
+echo "Basic Configuration is set up"
