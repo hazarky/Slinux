@@ -55,6 +55,9 @@ if [ "$option" == "$ALL_OPTIONS" ]; then
   sudo apt install -y python-pip stress
   sudo pip install s-tui
   sudo apt-get autoclean
+ echo "Installing fail2ban"
+ sudo apt-get install -y fail2ban
+ sudo apt-get autoclean
 else
 
  echo "what specifically do you want?"
